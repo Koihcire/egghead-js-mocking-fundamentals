@@ -7,6 +7,9 @@ test('returns winner', () => {
 
   const winner = thumbWar('Kent C. Dodds', 'Ken Wheeler')
   expect(winner).toBe('Kent C. Dodds')
+
+  // console.log(utils.getWinner) can see mock.calls. this can replace the bottom 2 assertions
+  // we would expect getWinner to be called twice because of the game logic in thumbwar, min 2 to win
   expect(utils.getWinner.mock.calls).toEqual([
     ['Kent C. Dodds', 'Ken Wheeler'],
     ['Kent C. Dodds', 'Ken Wheeler']
